@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.wrapper {
+  @apply container mx-auto px-10 lg:px-0 md:px-5;
+}
+
+/* Define the default style of the nav links */
+.nav-link {
+  @apply relative; /* Apply relative positioning */
+}
+
+body {
+  @apply text-white;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute inset-x-0 bottom-0.5 bg-gray-400 duration-300 ease-in-out w-[0%] h-[2px];
+}
+
+.nav-link:hover::after {
+  @apply w-[100%];
+}
+
+.f-link {
+  @apply duration-200;
+}
+
+.f-link:hover {
+  @apply text-white;
+}
